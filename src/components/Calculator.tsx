@@ -80,6 +80,11 @@ export default function Calculator() {
     }
   };
 
+  const handlePercent = () => {
+    const value = parseFloat(display);
+    setDisplay(String(value / 100));
+  };
+
   return (
     <div className="bg-white p-6 rounded-2xl shadow-xl w-80 text-black">
       <div className="bg-gray-100 p-4 rounded-lg mb-4 text-right">
@@ -91,9 +96,15 @@ export default function Calculator() {
       <div className="grid grid-cols-4 gap-3">
         <button
           onClick={handleClear}
-          className="col-span-3 bg-red-100 text-red-600 font-bold py-3 rounded-lg hover:bg-red-200 transition"
+          className="col-span-2 bg-red-100 text-red-600 font-bold py-3 rounded-lg hover:bg-red-200 transition"
         >
           AC
+        </button>
+        <button
+          onClick={handlePercent}
+          className="bg-gray-200 text-gray-800 font-bold py-3 rounded-lg hover:bg-gray-300 transition"
+        >
+          %
         </button>
         <button
           onClick={() => handleOperator("/")}
