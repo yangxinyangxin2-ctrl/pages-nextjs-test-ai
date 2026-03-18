@@ -8,8 +8,8 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState<"normal" | "mortgage">("normal");
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-4 md:p-24 bg-gray-50 dark:bg-gray-900">
-      <h1 className="text-4xl font-bold mb-8 text-gray-800 dark:text-gray-100">计算器</h1>
+    <main className="flex min-h-screen flex-col items-center justify-center p-4 md:p-24 bg-black">
+      <h1 className="text-4xl font-bold mb-8 text-white">计算器</h1>
       
       <div className="mb-8 bg-white dark:bg-gray-800 rounded-lg p-1 shadow-md">
         <button
